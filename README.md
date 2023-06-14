@@ -11,6 +11,10 @@ This folder contains a Google Colab notebook which produces the plots in Figure 
 ## Training_Performance
 This folder contains shortened versions of the code used to produce Figure 1 of _Network Degeneracy as an Indicator of Training Performance: Comparing Finite and Infinite Width Angle Predictions_ (Jakub and Nica, 2023b), which can be found at the following [link](https://arxiv.org/abs/2306.01513). This paper was submitted to the 2023 International Conferece on Machine Learning for the High-Dimensional Learning Dynamics workshop. The code is split into 3 notebooks, one for each of the MNIST, Fasion-MNIST, and CIFAR-10 datasets. Optional code is inlcuded to save the results in order to plot all 3 datasets together, as in the figure below.
 
+| ![Figure_1](Training_Performance/Figure_1.png) |
+| :--: | 
+| We compare 45 different network architectures trained on the MNIST, Fashion-MNIST, and CIFAR-10 datasets 10 times each. Using the architecture of the network and Algorithm 1, we predict the angle between 2 orthogonal inputs at the final output layer of the network on initialization. We express the angle as $\ln(\sin^2(\theta^L))$, to follow the form used when developing the finite width approximations. The angle is plotted against the accuracy of each network on the test data after training, with error bars representing a 95\% confidence interval across the 10 runs. All networks are trained using 1 epoch, batch size $=100$, categorical cross-entropy loss, the ADAM optimizer, and default learning rate in the Keras module of TensorFlow. See Appendix A.2 for details on all of the network architectures used. |
+
 ### References
 Cameron Jakub and Mihai Nica. Depth degeneracy in neural networks: Vanishing angles in
 fully connected ReLU networks on initialization, 2023a. URL https://arxiv.org/abs/2302.09712
